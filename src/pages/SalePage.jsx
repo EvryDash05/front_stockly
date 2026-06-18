@@ -2,11 +2,12 @@ import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import ShoppingCarT from '../components/sales/ShoppingCarT';
 import ProductCatalog from '../components/sales/ProductCatalog';
+import { API_URL } from '../utils/constants/constants';
 
 // 1. Petición GET: Obtener catálogo de productos real
 const fetchProductosAPI = async () => {
     const token = localStorage.getItem('token');
-    const res = await fetch('http://localhost:3000/product/', {
+    const res = await fetch(`${API_URL}/product/`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -26,7 +27,7 @@ const fetchProductosAPI = async () => {
 // 2. Petición POST: Despachar la transacción de venta a Express
 const createSaleAPI = async (payload) => {
     const token = localStorage.getItem('token');
-    const res = await fetch('http://localhost:3000/sale', {
+    const res = await fetch(`${API_URL}/sale`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
