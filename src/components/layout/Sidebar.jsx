@@ -7,7 +7,8 @@ import {
     Bell,
     Sparkles,
     Settings,
-    ChevronDown
+    ChevronDown,
+    ShoppingCart
 } from 'lucide-react';
 
 function Sidebar({ vistaActiva, setVistaActiva }) {
@@ -21,6 +22,7 @@ function Sidebar({ vistaActiva, setVistaActiva }) {
         { icon: Bell, label: 'Alertas' },
         { icon: Sparkles, label: 'Características' },
         { icon: Settings, label: 'Configuración' },
+        { icon: ShoppingCart, label: 'Venta' },
     ];
 
     return (

@@ -4,6 +4,8 @@ import DashboardPage from "./DashboardPage";
 import AddProductPage from "./AddProductPage";
 import InventoryCountPage from "./InventoryCountPage";
 import CurrentProductsPage from "./CurrentProductsPage";
+import SalePage from "./SalePage";
+import ReportPage from "./ReportPage";
 
 function MainMenuPage() {
 
@@ -20,6 +22,10 @@ function MainMenuPage() {
                 return <InventoryCountPage />;
             case 'Productos (Stock actual)':
                 return <CurrentProductsPage />;
+            case 'Reportes':
+                return <ReportPage />;
+            case 'Venta':
+                return <SalePage />;
             default:
                 return <div className="p-4">Sección en construcción...</div>;
         }
